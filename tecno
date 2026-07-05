@@ -2,3 +2,14 @@
 #comentario; primer script
 
 echo "primer script en bash"
+date
+echo "Tu directorio actual es:$(pwd)"
+name="tecno"
+echo "hola $name"
+a=5
+b=3
+let sum=a+b
+echo $sum
+sum2=$((a+b+1))
+echo $sum2
+echo "la primera suma es $sum , la segunda suma es $sum2"
