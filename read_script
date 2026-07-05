@@ -1,1 +1,9 @@
 #!/bin/bash
+echo "Como te llamas?"
+read name
+echo "Hola $name, como estas?"
+echo "$name,  ingresa un numero para sumar:"
+read a
+echo "$name,  ingresa otro numero para sumar:"
+read b
+echo "$name, la suma es:$((a+b))"
