@@ -1,0 +1,4 @@
+#!/bin/bash
+#comentario; primer script
+
+echo "primer script en bash"
