@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "El nombre del script: $0"
+echo "El parametro uno es: $1"
+echo "El parametro dos es: $2"
+echo "Numero de parametros: $#"
+echo "El listado con todos los argumentos: $@"
