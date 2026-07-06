@@ -1,7 +1,0 @@
-#!/bin/bash
-touch ParaEliminar.txt
-echo "Los siguientes archivos deben ser eliminados:" > ParaEliminar.txt
-ls  *.zip >> ParaEliminar.txt
-cat ParaEliminar.txt
-echo "El listado se encuentra en: ParaEliminar.txt"
-

@@ -1,2 +1,0 @@
-#!/bin/bash
-cat *.txt | grep -i "error"
