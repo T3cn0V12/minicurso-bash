@@ -1,0 +1,44 @@
+#!/bin/bash
+read -p "Ingrese el nombre de su nuevo directorio:" direc
+mkdir $direc
+cd "$direc"
+read -p "Su directorio ($direc) fue creado, continuar..."
+clear
+read -p "Desea crear un directorio git y/n:" cgit
+
+if [ "$cgit" = "y" ];then
+	git init
+	read -p "Desea agregar un README.md y/n:" creadme
+	if [ "$creadme" = "y" ]; then
+		touch README.md
+		read -p "README creado correctamente..."
+		clear
+	fi
+	read -p "Desea agregar un .gitignore y/n:" cgitignore
+	if [ "$cgitignore" = "y" ]; then
+		touch .gitignore
+		read -p "gitignore creado correctamente..."
+		clear
+	fi
+fi
+read -p "Desea crear subcarpetas? y/n" sub
+clear
+
+if [ "$sub" = "y" ]; then
+	read -p "Cuantas subcarpetas desea crear?" num
+	for ((i=1; i<=num; i++))
+	do
+		read -p "Ingrese el nombre de la carpeta $i:" subcarpeta
+		mkdir $subcarpeta
+		clear
+	done
+
+	if [ "$cgit" = "y" ]; then
+		git add .
+		read -p "Que mensaje desea poner en commit?" msj
+		git commit -m "$msj"
+		clear
+	fi
+fi
+
+

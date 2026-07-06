@@ -1,0 +1,5 @@
+#!/bin/bash
+eval "$(ssh-agent -s)"
+ssh-add /home/kali/.ssh/id_rsa
+
+
